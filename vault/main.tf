@@ -1,5 +1,6 @@
 provider "vault" {
-  address = var.vault_address
+  address          = var.vault_address
+  skip_child_token = true
   auth_login_jwt {
     role = "infra-preprod"
   }
