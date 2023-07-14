@@ -16,7 +16,7 @@ resource "spacelift_stack" "blog_examples" {
   name              = "blog-examples"
   project_root      = "migration"
   repository        = "blog-examples"
-  terraform_version = "1.5.3"
+  terraform_version = "1.5.2"
 
   # 8< --------------------------------------------------------------
   # Delete the following line after the stack has been created
@@ -34,7 +34,7 @@ resource "spacelift_stack" "terraform_data" {
   name              = "terraform_data"
   project_root      = "migration"
   repository        = "blog-examples"
-  terraform_version = "1.5.3"
+  terraform_version = "1.5.2"
 
   # 8< --------------------------------------------------------------
   # Delete the following line after the stack has been created
