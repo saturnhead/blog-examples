@@ -1,3 +1,3 @@
-output "random_pet_name" {
-  value = random_pet.this.id
+output "vpc_id" {
+  value       = aws_vpc.this.id
 }
