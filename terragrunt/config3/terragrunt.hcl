@@ -4,6 +4,9 @@ terraform {
 
 dependency "config1" {
   config_path  = "../config1"
+  mock_outputs = {
+    vpc_id = "fake-vpc-id"
+  }
 }
 
 inputs = {
