@@ -1,5 +1,5 @@
 terraform {
-  source = "./config1"
+  source = "./"
 }
 
 inputs = {}
