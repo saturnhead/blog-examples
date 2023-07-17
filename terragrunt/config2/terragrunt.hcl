@@ -2,13 +2,13 @@ terraform {
   source = "./"
 }
 
-inputs = {
-  vpc_id = dependency.config1.outputs.vpc_id
-}
-
 dependency "config1" {
   config_path  = "../config1"
   skip_outputs = true
+}
+
+inputs = {
+  vpc_id = dependency.config1.outputs.vpc_id
 }
 
 remote_state {
