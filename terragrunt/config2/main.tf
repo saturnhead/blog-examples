@@ -8,5 +8,10 @@ terraform {
 
 resource "aws_subnet" "this" {
     cidr_block = "10.0.1.0/24"
-    vpc_id     = dependency.config1.outputs.vpc_id
+    vpc_id     = var.vpc_id
+}
+
+variable "vpc_id" {
+  description = "The ID of the VPC"
+  type        = string
 }

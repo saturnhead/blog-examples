@@ -2,7 +2,9 @@ terraform {
   source = "./"
 }
 
-inputs = {}
+inputs = {
+  vpc_id = dependency.config1.outputs.vpc_id
+}
 
 dependency "config1" {
   config_path  = "../config1"

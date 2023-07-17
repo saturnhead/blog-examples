@@ -8,7 +8,7 @@ terraform {
 
 resource "aws_security_group" "this" {
   name   = "this"
-  vpc_id = dependency.config1.outputs.vpc_id
+  vpc_id = var.vpc_id
 
   ingress {
     from_port   = 0
@@ -16,4 +16,9 @@ resource "aws_security_group" "this" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+}
+
+variable "vpc_id" {
+  description = "The ID of the VPC"
+  type        = string
 }
