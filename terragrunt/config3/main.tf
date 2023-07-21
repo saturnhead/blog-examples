@@ -16,6 +16,12 @@ resource "aws_security_group" "this" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+
+  tags = {
+    Name  = "security_group1"
+    env   = "dev"
+    owner = "config3"
+  }
 }
 
 variable "vpc_id" {
