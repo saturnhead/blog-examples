@@ -9,8 +9,15 @@ vpc_params = {
   vpc2 = {
     cidr_block = "11.0.0.0/16"
     tags = {
-      Name : "vpc1"
+      Name : "vpc2"
       owner : "owner2"
+    }
+  }
+  vpc3 = {
+    cidr_block = "12.0.0.0/16"
+    tags = {
+      Name : "vpc3"
+      owner : "owner3"
     }
   }
 }
