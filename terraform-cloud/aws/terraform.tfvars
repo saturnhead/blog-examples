@@ -33,21 +33,21 @@ subnet_params = {
   subnet12 = {
     cidr_block = "10.0.2.0/24"
     tags = {
-      Name = "subnet2"
+      Name = "subnet12"
     }
     vpc_id = "vpc1"
   }
   subnet21 = {
     cidr_block = "11.0.1.0/24"
     tags = {
-      Name = "subnet11"
+      Name = "subnet21"
     }
     vpc_id = "vpc2"
   }
   subnet22 = {
     cidr_block = "11.0.2.0/24"
     tags = {
-      Name = "subnet2"
+      Name = "subnet22"
     }
     vpc_id = "vpc2"
   }
