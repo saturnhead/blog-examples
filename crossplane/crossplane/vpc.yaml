@@ -1,0 +1,30 @@
+apiVersion: ec2.aws.upbound.io/v1beta1
+kind: VPC
+metadata:
+  labels:
+    name: vpc-example
+  name: vpc-example
+spec:
+  forProvider:
+    cidrBlock: 10.1.0.0/16
+    region: eu-west-1
+  providerConfigRef: 
+    name: provider-aws-ec2
+
+---
+apiVersion: ec2.aws.upbound.io/v1beta1
+kind: Subnet
+metadata:
+  labels:
+    name: subnet-example
+  name: subnet-example
+spec:
+  forProvider:
+    availabilityZone: eu-west-1b
+    cidrBlock: 10.1.5.0/24
+    region: eu-west-1
+    vpcIdSelector:
+      matchLabels:
+        name: vpc-example
+  providerConfigRef: 
+    name: provider-aws-ec2
