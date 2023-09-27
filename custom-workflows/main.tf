@@ -1,7 +1,11 @@
-resource "random_pet" "pet" {
-  length = 3
+terraform {
+  required_providers {
+    random = {
+      source = "registry.opentofu.org/hashicorp/random"
+    }
+  }
 }
 
-output "pet" {
-  value = random_pet.pet.id
+resource "random_pet" "pet" {
+  length = 3
 }
