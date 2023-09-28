@@ -1,0 +1,9 @@
+init: tofu init -input=false
+workspaceSelect: tofu workspace select "{{ .WorkspaceName }}"
+workspaceNew: tofu workspace new "{{ .WorkspaceName }}"
+plan: tofu plan -input=false -lock={{ .Lock }} {{ if not .Refresh }}-refresh=false {{ end }}-out={{ .PlanFileName }} {{ range .Targets }}-target='{{ . }}' {{ end }}
+showState: tofu show -json
+showPlan: tofu show -json "{{ .PlanFileName }}"
+getOutputs: tofu output -json
+apply: tofu apply -auto-approve -input=false "{{ .PlanFileName }}"
+destroy: tofu destroy -auto-approve -input=false
