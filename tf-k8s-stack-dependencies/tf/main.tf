@@ -21,5 +21,6 @@ module "aks" {
 }
 
 output "kube_config" {
-  value = module.aks.kube_config["kube1"]
+  value     = module.aks.kube_config["kube1"]
+  sensitive = true
 }
