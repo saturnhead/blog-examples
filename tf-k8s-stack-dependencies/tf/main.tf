@@ -3,7 +3,7 @@ provider "azurerm" {
 }
 
 module "aks" {
-  source = "github.com/flavius-dinu/terraform-az-aks.git?ref=v1.0.11"
+  source = "github.com/flavius-dinu/terraform-az-aks.git?ref=v1.0.12"
   kube_params = {
     kube1 = {
       name                = "kube1"
