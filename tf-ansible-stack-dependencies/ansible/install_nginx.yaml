@@ -7,13 +7,7 @@
       apt:
         update_cache: yes
 
-    - name: Install NGINX
+    - name: Install htop
       apt:
-        name: nginx
+        name: htop
         state: present
-
-    - name: Ensure NGINX is started and enabled
-      service:
-        name: nginx
-        state: started
-        enabled: yes
