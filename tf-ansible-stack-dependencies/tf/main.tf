@@ -9,6 +9,11 @@ data "aws_ami" "ubuntu" {
     name   = "name"
     values = ["ubuntu*"]
   }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
 }
 
 locals {
