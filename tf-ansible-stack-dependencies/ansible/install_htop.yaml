@@ -1,5 +1,5 @@
 ---
-- name: Install NGINX
+- name: Install htop
   hosts: all
   become: yes
   tasks:
