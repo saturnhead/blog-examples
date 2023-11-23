@@ -14,6 +14,10 @@ module "vpc" {
       cidr_block = "10.0.1.0/24"
       vpc_name   = "vpc1"
     }
+    subnet2 = {
+      cidr_block = "10.0.2.0/24"
+      vpc_name   = "vpc1"
+    }
   }
   igw_parameters = {
     igw1 = {
