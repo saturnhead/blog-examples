@@ -27,3 +27,8 @@ resource "null_resource" "name5" {
     command = "echo project globs"
   } 
 }
+resource "null_resource" "name6" {
+  provisioner "local-exec" {
+    command = "echo project globs"
+  } 
+}
