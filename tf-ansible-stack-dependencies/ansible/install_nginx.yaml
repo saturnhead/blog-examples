@@ -22,7 +22,6 @@
       
     - name: Install Nginx
       ansible.builtin.apt:
-        update_cache: yes
         name: nginx
         state: present
       when: ansible_os_family == "Debian"
