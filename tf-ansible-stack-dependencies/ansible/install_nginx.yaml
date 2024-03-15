@@ -20,10 +20,8 @@
         state: present
       when: ansible_os_family == "RedHat"
       
-    - name: Install Nginx
-      ansible.builtin.apt:
-        name: nginx
-        state: present
+    - name: install nginx
+      apt: name=nginx state=latest
       when: ansible_os_family == "Debian"
 
     - name: Create index.html
