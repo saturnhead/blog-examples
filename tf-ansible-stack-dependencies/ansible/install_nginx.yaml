@@ -1,6 +1,6 @@
 ---
 - name: Install and Configure Nginx
-  hosts: webservers
+  hosts: all
   become: yes
   pre_tasks:
     - name: Set SSH user for Ubuntu systems
