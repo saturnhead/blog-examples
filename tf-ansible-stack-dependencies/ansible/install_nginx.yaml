@@ -27,7 +27,7 @@
         state: present
       when: ansible_os_family == "Debian"
 
-       - name: Create index.html
+    - name: Create index.html
       ansible.builtin.copy:
         dest: /usr/share/nginx/html/index.html
         content: |
