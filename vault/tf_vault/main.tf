@@ -8,7 +8,7 @@ provider "vault" {
 
 data "vault_kv_secret_v2" "vpc_secret" {
   mount = "secret"
-  name  = "data/vpc"
+  name  = "vpc"
 }
 
 locals {
