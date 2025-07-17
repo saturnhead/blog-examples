@@ -6,12 +6,13 @@ provider "vault" {
   }
 }
 
-data "vault_generic_secret" "this" {
-  path = "secrets/vpc"
+data "vault_kv_secret_v2" "vpc_secret" {
+  mount = "secret"
+  name  = "data/vpc"
 }
 
 locals {
-  vpc_cidr    = data.vault_generic_secret.this.data["cidr_block"]
+  vpc_cidr    = data.vault_kv_secret_v2.vpc_secret.data["cidr_block"]
   subnet_cidr = cidrsubnet(local.vpc_cidr, 8, 1)
 }
 
